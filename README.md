@@ -29,6 +29,8 @@ This is the front-end part of my app. Tailwind and client side.
 16. Update the header and make the profile page private
 17. Complete profile page UI
 18. Complete image upload functionality
+19. Create update user API route
+    - cookie-parser was installed
 
 
 
