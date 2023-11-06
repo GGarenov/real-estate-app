@@ -21,4 +21,10 @@ This is the front-end part of my app. Tailwind and client side.
 12. Complete sign in page functionality
 13. Add redux toolkit
 14. Add redux persist
+15. Add Google OAuth functionality
+    - install Firebase in order to make it work
+    - create auth route
+    - fix auth controller
+    - create OAuth.jsx
+
 
