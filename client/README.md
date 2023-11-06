@@ -7,3 +7,4 @@ This is the front-end part of my app. Tailwind and client side.
 3. Create Header Component
 4. Installing Express JS, nodemon, env and Mongoose
 5. Connect with the Database
+6. User model was created
