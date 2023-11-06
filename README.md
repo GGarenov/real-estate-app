@@ -16,3 +16,4 @@ This is the front-end part of my app. Tailwind and client side.
     - controlers and routes were created
 9. Create a middleware and error handlers
 10. Complete sign up page UI
+11. Complete sign up page functionality
