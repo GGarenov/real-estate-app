@@ -26,5 +26,7 @@ This is the front-end part of my app. Tailwind and client side.
     - create auth route
     - fix auth controller
     - create OAuth.jsx
+16. Update the header and make the profile page private
+
 
 
