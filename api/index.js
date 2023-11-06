@@ -1,7 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import { error } from "console";
 dotenv.config();
 
 mongoose
@@ -9,8 +8,8 @@ mongoose
   .then(() => {
     console.log(`Uspeshno se vurzahme za MongoDB!`);
   })
-  .catch((error) => {
-    console.log(error);
+  .catch((err) => {
+    console.log(err);
   });
 
 const app = express();
