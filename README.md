@@ -20,4 +20,5 @@ This is the front-end part of my app. Tailwind and client side.
 11. Create sign in API route
 12. Complete sign in page functionality
 13. Add redux toolkit
+14. Add redux persist
 
