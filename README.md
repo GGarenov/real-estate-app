@@ -45,6 +45,11 @@ This is the front-end part of my app. Tailwind and client side.
  - tailwind effects
  - firebase for uploading the images
 
+26. Complete creating list page functionality 
+
+27. Create API route for get user listing
+28. Complete show user listings functionality
+
 
 
 
