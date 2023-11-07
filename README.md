@@ -36,6 +36,14 @@ This is the front-end part of my app. Tailwind and client side.
 21. Add Delete User functionality
 22. Add Sign Out functionality
 23. Add create listing API route
+24. Create UI for the Create-listing page
+25. Complete upload listing images functionality
+ using:
+ - usestate
+ - react hooks
+ - promises
+ - tailwind effects
+ - firebase for uploading the images
 
 
 
