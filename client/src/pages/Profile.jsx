@@ -11,6 +11,9 @@ import {
   updateUserStart,
   updateUserSuccess,
   updateUserFailure,
+  deleteUserFailure,
+  deleteUserStart,
+  deleteUserSuccess,
 } from '../redux/user/userSlice';
 import { useDispatch } from 'react-redux';
 export default function Profile() {
@@ -22,8 +25,6 @@ export default function Profile() {
   const [formData, setFormData] = useState({});
   const [updateSuccess, setUpdateSuccess] = useState(false);
   const dispatch = useDispatch();
-
- 
   // firebase storage
   // allow read;
   // allow write: if
@@ -42,8 +43,8 @@ export default function Profile() {
     uploadTask.on(
       'state_changed',
       (snapshot) => {
-        const progress = 
-        (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        const progress =
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
         setFilePerc(Math.round(progress));
       },
       (error) => {
@@ -56,11 +57,9 @@ export default function Profile() {
       }
     );
   };
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -77,22 +76,37 @@ export default function Profile() {
         dispatch(updateUserFailure(data.message));
         return;
       }
-
       dispatch(updateUserSuccess(data));
       setUpdateSuccess(true);
     } catch (error) {
       dispatch(updateUserFailure(error.message));
     }
   };
+
+  const handleDeleteUser = async () => {
+    try {
+      dispatch(deleteUserStart());
+      const res = await fetch(`/api/user/delete/${currentUser._id}`, {
+        method: 'DELETE',
+      });
+      const data = await res.json();
+      if (data.success === false) {
+        dispatch(deleteUserFailure(data.message));
+        return;
+      }
+      dispatch(deleteUserSuccess(data));
+    } catch (error) {
+      dispatch(deleteUserFailure(error.message));
+    }
+  };
   return (
     <div className='p-3 max-w-lg mx-auto'>
       <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
-    
-    <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
+      <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input
           onChange={(e) => setFile(e.target.files[0])}
           type='file'
-    ref={fileRef}
+          ref={fileRef}
           hidden
           accept='image/*'
         />
@@ -112,7 +126,7 @@ export default function Profile() {
           ) : filePerc === 100 ? (
             <span className='text-green-700'>Image successfully uploaded!</span>
           ) : (
-                  ''
+            ''
           )}
         </p>
         <input
@@ -132,13 +146,13 @@ export default function Profile() {
           onChange={handleChange}
         />
         <input
-     type='password'
+          type='password'
           placeholder='password'
           onChange={handleChange}
           id='password'
           className='border p-3 rounded-lg'
         />
-    <button
+        <button
           disabled={loading}
           className='bg-slate-700 text-white rounded-lg p-3 uppercase hover:opacity-95 disabled:opacity-80'
         >
@@ -146,7 +160,12 @@ export default function Profile() {
         </button>
       </form>
       <div className='flex justify-between mt-5'>
-        <span className='text-red-700 cursor-pointer'>Delete account</span>
+    <span
+          onClick={handleDeleteUser}
+          className='text-red-700 cursor-pointer'
+        >
+          Delete account
+        </span>
         <span className='text-red-700 cursor-pointer'>Sign out</span>
       </div>
 
