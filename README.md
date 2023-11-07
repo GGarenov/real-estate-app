@@ -32,6 +32,11 @@ This is the front-end part of my app. Tailwind and client side.
 19. Create update user API route
     - cookie-parser was installed
 
+20. Complete update user functionality
+21. Add Delete User functionality
+22. Add Sign Out functionality
+23. Add create listing API route
+
 
 
 
