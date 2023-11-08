@@ -72,6 +72,10 @@ This is the front-end part of my app. Tailwind and client side.
     - userEffects were used in Contact.jsx in order to fetch the data
     - tailwind css styling by making some buttons and other Link functionalities
 
+35. Create Search API routes
+    - listing.controller and listing.route
+    
+
 
 
 
