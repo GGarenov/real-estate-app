@@ -49,6 +49,11 @@ This is the front-end part of my app. Tailwind and client side.
 
 27. Create API route for get user listing
 28. Complete show user listings functionality
+29. Delete user listing was created yesterday.
+30. Update listing API route was created yesterday also.
+31. Update user listing functionalisty was fixed.
+    - I just copied everything from CreateListing.jsx and edited it as I want.
+    - useEffect was used 
 
 
 
