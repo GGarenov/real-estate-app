@@ -74,7 +74,10 @@ This is the front-end part of my app. Tailwind and client side.
 
 35. Create Search API routes
     - listing.controller and listing.route
-    
+
+36. Complete header search form functionality
+    - using useNavigate from react-router-dom
+    - useEffect and useState
 
 
 
