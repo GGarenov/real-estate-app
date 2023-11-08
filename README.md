@@ -65,6 +65,13 @@ This is the front-end part of my app. Tailwind and client side.
     - Create listing was styled with some css from tailwind
     - Listing was styled with some css from tailwind
 
+34. Add contact landlord functionality to the listing page
+    - Using React redux use selector we make the contact landlord button visible only for users who are not the owners of the listing (and also we created the button :D)
+    - Contact.jsx was created as a component
+    - API routes were created in user.route and user.controller 
+    - userEffects were used in Contact.jsx in order to fetch the data
+    - tailwind css styling by making some buttons and other Link functionalities
+
 
 
 
