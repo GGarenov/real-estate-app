@@ -55,6 +55,12 @@ This is the front-end part of my app. Tailwind and client side.
     - I just copied everything from CreateListing.jsx and edited it as I want.
     - useEffect was used 
 
+32. Working on a listing page
+    - creating Listing.jsx
+    - Using useState, useEffect, useParams
+    - Swiper was installed so that we can create slider and it looks perfect with some css styling from tailwind :D
+
+
 
 
 
