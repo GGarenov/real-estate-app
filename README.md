@@ -79,6 +79,11 @@ This is the front-end part of my app. Tailwind and client side.
     - using useNavigate from react-router-dom
     - useEffect and useState
 
+37. Create search page UI
+    - Search.jsx was created with some className and other css from tailwind
+    - Adding Search page to App.jsx
+
+
 
 
 
