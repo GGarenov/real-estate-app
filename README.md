@@ -94,8 +94,11 @@ This is the front-end part of my app. Tailwind and client side.
 40. Creating "show more" button to show more listings
     - just make useState and onclick function
 
-41. Home page
-    - 
+41. Home page design
+
+42. About page
+
+43. Deploy the project
 
 
 
