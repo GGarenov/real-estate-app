@@ -84,6 +84,13 @@ This is the front-end part of my app. Tailwind and client side.
     - Adding Search page to App.jsx
 
 38. Add onChange and onSubmit functionality to the search page
+
+39. Create the listing item component and show listings
+    - ListingItem.jsx was created
+    - tailwind styling and css playing
+    - tailwind line-clamp was installed in order to make the listing results look better
+
+
     
 
 
