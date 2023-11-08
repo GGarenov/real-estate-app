@@ -83,6 +83,9 @@ This is the front-end part of my app. Tailwind and client side.
     - Search.jsx was created with some className and other css from tailwind
     - Adding Search page to App.jsx
 
+38. Add onChange and onSubmit functionality to the search page
+    
+
 
 
 
