@@ -91,9 +91,11 @@ This is the front-end part of my app. Tailwind and client side.
     - tailwind line-clamp was installed in order to make the listing results look better
 
 
-    
+40. Creating "show more" button to show more listings
+    - just make useState and onclick function
 
-
+41. Home page
+    - 
 
 
 
