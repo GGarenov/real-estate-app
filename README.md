@@ -60,6 +60,10 @@ This is the front-end part of my app. Tailwind and client side.
     - Using useState, useEffect, useParams
     - Swiper was installed so that we can create slider and it looks perfect with some css styling from tailwind :D
 
+33. Completing the listing page to look perfect
+    - Updating listing was styled with some css from tailwind
+    - Create listing was styled with some css from tailwind
+    - Listing was styled with some css from tailwind
 
 
 
