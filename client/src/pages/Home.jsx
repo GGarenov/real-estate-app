@@ -46,19 +46,22 @@ export default function Home() {
   return (
     <div>
       {/* top */}
-      <div className="flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto">
+      <div
+        className="flex flex-col gap-6 p-6 md:p-28 px-4
+       max-w-6xl mx-auto"
+      >
         <h1 className="text-slate-700 font-bold text-3xl lg:text-6xl">
           Find your new <span className="text-slate-500">home</span>
           <br />
           and live your perfect life
         </h1>
-        <div className="text-gray-400 text-xs sm:text-sm">
+        <div className="text-gray-400 text-xs sm:text-xl">
           Garenov Estate offers luxury places where you can live for the rest of your life.
           <br />
           We have a wide range of properties for you to choose from.
         </div>
-        <Link to={"/search"} className="text-xs sm:text-sm text-blue-800 font-bold hover:underline">
-          Let's get started...
+        <Link to={"/search"} className="text-xl sm:text-xl text-blue-800 font-bold hover:underline">
+          Search Now..
         </Link>
       </div>
 
