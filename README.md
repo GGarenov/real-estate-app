@@ -1,10 +1,10 @@
-# REAL ESTATE MERN APP
+# Real Estate MERN App
 
-## DESCRIPTION
+## Description
 
 A real estate marketplace built with the MERN stack. This Single Page Application allows users to browse different real estates for both renting and selling. Registered users can create listings for apartments or houses for sale or rent. The search page enables users to filter their searches based on criteria such as parking, furnishing, rent, or sale. Users can register and personalize their profiles by changing their profile pictures.
 
-## TABLE OF CONTENTS
+## Table of Contents
 
 - [Features](#features)
 - [Demo](#demo)
@@ -32,11 +32,11 @@ A real estate marketplace built with the MERN stack. This Single Page Applicatio
 - Contact form to send messages to the owner of the real estate
 - About page
 
-## DEMO
+## Demo
 
 You can check the app in real-time at [https://real-estate-app-mern-qxrr.onrender.com/](https://real-estate-app-mern-qxrr.onrender.com/)
 
-## GETTING STARTED
+## Getting Started
 
 To set up this project locally, follow these instructions:
 
