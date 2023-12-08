@@ -1,104 +1,131 @@
-# Real Estate App Front-End
+# REAL ESTATE MERN APP
 
-This is the front-end part of my app. Tailwind and client side.
+## DESCRIPTION
 
-1. Vite, tailwind and react were installed and configured.
-2. Pages and routes were created.
-3. Create Header Component
-4. Installing Express JS, nodemon, env and Mongoose
-5. Connect with the Database
-6. User model was created
-7. Creating API test routing 
-    - controllers folder routes folder were created
-    - first test router is created
-8. Create signup route
-    - bcrypt was installed
-    - controlers and routes were created
-9. Create a middleware and error handlers
-10. Complete sign up page UI
-11. Complete sign up page functionality
-11. Create sign in API route
-12. Complete sign in page functionality
-13. Add redux toolkit
-14. Add redux persist
-15. Add Google OAuth functionality
-    - install Firebase in order to make it work
-    - create auth route
-    - fix auth controller
-    - create OAuth.jsx
-16. Update the header and make the profile page private
-17. Complete profile page UI
-18. Complete image upload functionality
-19. Create update user API route
-    - cookie-parser was installed
+A real estate marketplace built with the MERN stack. This Single Page Application allows users to browse different real estates for both renting and selling. Registered users can create listings for apartments or houses for sale or rent. The search page enables users to filter their searches based on criteria such as parking, furnishing, rent, or sale. Users can register and personalize their profiles by changing their profile pictures.
 
-20. Complete update user functionality
-21. Add Delete User functionality
-22. Add Sign Out functionality
-23. Add create listing API route
-24. Create UI for the Create-listing page
-25. Complete upload listing images functionality
- using:
- - usestate
- - react hooks
- - promises
- - tailwind effects
- - firebase for uploading the images
+## TABLE OF CONTENTS
 
-26. Complete creating list page functionality 
-
-27. Create API route for get user listing
-28. Complete show user listings functionality
-29. Delete user listing was created yesterday.
-30. Update listing API route was created yesterday also.
-31. Update user listing functionalisty was fixed.
-    - I just copied everything from CreateListing.jsx and edited it as I want.
-    - useEffect was used 
-
-32. Working on a listing page
-    - creating Listing.jsx
-    - Using useState, useEffect, useParams
-    - Swiper was installed so that we can create slider and it looks perfect with some css styling from tailwind :D
-
-33. Completing the listing page to look perfect
-    - Updating listing was styled with some css from tailwind
-    - Create listing was styled with some css from tailwind
-    - Listing was styled with some css from tailwind
-
-34. Add contact landlord functionality to the listing page
-    - Using React redux use selector we make the contact landlord button visible only for users who are not the owners of the listing (and also we created the button :D)
-    - Contact.jsx was created as a component
-    - API routes were created in user.route and user.controller 
-    - userEffects were used in Contact.jsx in order to fetch the data
-    - tailwind css styling by making some buttons and other Link functionalities
-
-35. Create Search API routes
-    - listing.controller and listing.route
-
-36. Complete header search form functionality
-    - using useNavigate from react-router-dom
-    - useEffect and useState
-
-37. Create search page UI
-    - Search.jsx was created with some className and other css from tailwind
-    - Adding Search page to App.jsx
-
-38. Add onChange and onSubmit functionality to the search page
-
-39. Create the listing item component and show listings
-    - ListingItem.jsx was created
-    - tailwind styling and css playing
-    - tailwind line-clamp was installed in order to make the listing results look better
+- [Features](#features)
+- [Demo](#demo)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+- [Usage](#usage)
+- [Deployment](#deployment)
+- [Built With](#built-with)
+- [Contributing](#contributing)
 
 
-40. Creating "show more" button to show more listings
-    - just make useState and onclick function
+## Features
 
-41. Home page design
+- Login/Signup User Account
+- Login using Email/Username
+- Login using Google Account
+- Update Profile/Password User Account
+- Update Profile picture
+- Delete Profile
+- Search real estates by rent, sale, and other filters
+- Upload a real estate for sale/rent
+- Delete/Edit real estate
+- Contact form to send messages to the owner of the real estate
+- About page
 
-42. About page
+## DEMO
 
-43. Deploy the project
+You can check the app in real-time at [https://real-estate-app-mern-qxrr.onrender.com/](https://real-estate-app-mern-qxrr.onrender.com/)
 
+## GETTING STARTED
 
+To set up this project locally, follow these instructions:
+
+### Prerequisites
+
+Make sure you have the following software installed on your machine:
+
+- [Node.js](https://nodejs.org/) (version 14 or later)
+- [npm](https://www.npmjs.com/) (included with Node.js installation)
+- [MongoDB](https://www.mongodb.com/) (for the backend)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/GGarenov/real-estate-app
+   cd real-estate-app
+
+2. Install dependencies for the server (in the root folder):
+    npm install
+
+3. Install dependencies for the client (in the client folder):
+    cd client
+    npm install 
+
+### Configuration
+
+1. Create a .env file in the root folder and set PORT and MONGODB_URL.
+
+2. Running the application:
+    - Start the server from the root folder:
+        - npm run dev
+    - Start the client in the client folder:
+        - npm run dev
+
+3. Building for Production:
+    - npm run build
+
+### Usage
+
+1. Register/Login:
+
+Open the application in your browser.
+Click on the "Sign In" button to create a new account or log in if you already have one.
+Alternatively, use the Google Account option for a quicker login process.
+
+2. Browse Real Estates:
+
+Explore the available real estates on the main page by clicking the "Search Now" button.
+Use the search functionality to filter results based on criteria such as rent, sale, parking availability, and furnishing.
+
+3. Create Your Listing:
+
+Click on the "Create Listing" button on the profile page to create a new listing for a property.
+Provide details such as title, description, address, type (for sale or rent), and any additional information.
+Upload images to showcase the property.
+
+4. Manage Your Listings:
+
+Access the "Show Listings" section to view, edit, or delete your existing real estate listings.
+
+5. Contact Owners:
+
+Use the contact form by clicking on the "Contact Landlord" button on each real estate page to send messages to the owners.
+
+6. Update Profile:
+
+Navigate to the profile section to update your account details.
+Change your profile picture or username to personalize your account.
+
+### Deployment
+
+The application is deployed and can be accessed in real-time at https://real-estate-app-mern-qxrr.onrender.com/
+
+### Built With
+
+# Frontend:
+- React
+- React Redux Toolkit
+- Firebase (Authentication)
+- Tailwind CSS
+
+# Backend:
+- Node.js
+- Express.js
+- MongoDB
+
+### Contributing
+
+Feel free to contribute to the development of this project. Fork the repository, make your changes, and submit a pull request.
 
