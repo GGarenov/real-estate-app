@@ -14,6 +14,10 @@ const listingSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    tel: {
+      type: String,
+      required: true,
+    },
     regularPrice: {
       type: Number,
       required: true,
