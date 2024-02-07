@@ -5,6 +5,8 @@ import ImageGallery from "react-image-gallery";
 import { useSelector } from "react-redux";
 
 import { FaBath, FaBed, FaChair, FaMapMarkedAlt, FaMapMarkerAlt, FaParking, FaShare } from "react-icons/fa";
+import { BsFillTelephonePlusFill } from "react-icons/bs";
+
 import Contact from "../components/Contact";
 import { getListingById } from "../client";
 import "react-image-gallery/styles/css/image-gallery.css";
@@ -39,6 +41,8 @@ export default function Listing() {
     fetchListing();
   }, [params.listingId]);
 
+  console.log(listing);
+
   return (
     <main>
       {loading && <p className="text-center my-7 text-2xl">Loading...</p>}
@@ -60,17 +64,29 @@ export default function Listing() {
           {copied && <p className="fixed top-[23%] right-[5%] z-10 rounded-md bg-slate-100 p-2">Link copied!</p>}
           <div className="flex flex-col max-w-4xl mx-auto p-3 my-7 gap-4">
             <p className="text-2xl font-bold">
-              {listing.name}{" "}
+              {listing.name} <br />
               {listing.offer
                 ? listing.discountPrice.toLocaleString("en-US")
                 : listing.regularPrice.toLocaleString("en-US")}{" "}
               лв.
               {listing.type === "rent" && " / month"}
             </p>
-            <p className="flex items-center mt-6 gap-2 text-slate-600  text-sm">
-              <FaMapMarkerAlt className="text-green-700" />
-              {listing.address}
-            </p>
+
+            <div className="flex items-center mt-6 gap-5 text-slate-600 text-sm">
+              <p className="flex items-center mt-6 gap-2 text-slate-600  text-sm">
+                <FaMapMarkerAlt className="text-green-700 text-xl" />
+                {listing.address}
+              </p>
+              <p className="flex items-center mt-6 gap-2 text-slate-600 text-sm">
+                <BsFillTelephonePlusFill className="text-green-700 text-xl" />
+                {listing && listing.tel && (
+                  <a href={`tel:${listing.tel}`} className="text-blue-500 hover:underline text-xl">
+                    {listing.tel}
+                  </a>
+                )}
+              </p>
+            </div>
+
             <ul className="text-green-900 font-semibold text-lg flex flex-wrap items-center gap-4 sm:gap-6">
               <li className="flex items-center gap-1 whitespace-nowrap ">
                 <FaBed className="text-lg" />
@@ -93,6 +109,21 @@ export default function Listing() {
               items={listing.imageUrls.map((url) => ({
                 original: url,
                 thumbnail: url,
+                renderThumbInner: (item) => (
+                  <div>
+                    <img
+                      src={item.thumbnail}
+                      alt={item.thumbnailAlt}
+                      title={item.thumbnailTitle}
+                      style={{
+                        width: "100px",
+                        height: "100px",
+                        objectFit: "cover",
+                      }}
+                    />
+                    {item.thumbnailLabel && <div className="image-gallery-thumbnail-label">{item.thumbnailLabel}</div>}
+                  </div>
+                ),
               }))}
             />
             <div className="flex gap-4">
